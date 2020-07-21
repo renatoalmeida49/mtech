@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>MTech</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+		<link rel="stylesheet" href="bootstrap.min.css" />
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body class="bg-dark">
+		<header>
+			<nav class="navbar navbar-expand-md bg-dark fixed-top navbar-dark">
+				<a class="navbar-brand" href="index.html">MTech</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+		          <span class="navbar-toggler-icon"></span>
+		        </button>
+				<div class="collapse navbar-collapse" id="navbarCollapse">
+					<ul class="navbar-nav mr-auto">
+						<li class="nav-item">
+							<a href="index.html" class="nav-link">Home</a>
+						</li>
+						<li class="nav-item">
+							<a href="contato.html" class="nav-link">Contato</a>
+						</li>
+						<li class="nav-item">
+							<a href="sobre.html" class="nav-link">Sobre</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+        </header>
+
+        <section>
+            <div class="container part2">
+
+                <div class="py-5 text-center">
+                    <h2>Formulário de contato</h2>
+                </div>
+
+                <div class="row" style="justify-content: center;">
+                    <form method="POST">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label for="nome">Nome</label>
+                                <input type="text" class="form-control" id="nome" required />
+                            </div>
+                            <div class="col-md-6">
+                                <label for="sobrenome">Sobrenome</label>
+                                <input type="text" class="form-control" id="sobrenome" required />
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" class="form-control" />
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="descricao">Descreva o assunto:</label>
+                            <textarea id="descricao" class="form-control" rows="10" cols="80"></textarea>
+                        </div>
+
+                        <button class="btn-secondary btn">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        
+        <footer>
+			<div class="container part2">
+				Todos os direitos reservados. 2020.
+			</div>
+		</footer>
+
+		<hr class="featurette-divider">
+        
+		<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+		<script type="text/javascript" src="bootstrap.min.js"></script>
+	</body>
+</html>

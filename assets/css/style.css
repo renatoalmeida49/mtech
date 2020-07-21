@@ -1,0 +1,33 @@
+header {
+	margin-bottom: 50px;
+}
+.color {
+	background-color: #264c73;
+}
+
+p, h2 {
+	text-align: center;
+}
+
+.part2 {
+	text-align: center;
+	padding-top: 15px;
+	color: white;
+}
+
+.marketing {
+	margin-top: 50px;
+}
+
+.form-singin {
+	width: 100%;
+	max-width: 330px;
+	margin: auto;
+	padding: 15px;
+}
+
+.form-resposta {
+	width: 100%;
+	margin:auto;
+	max-width: 500px;
+}
