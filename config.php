@@ -8,11 +8,11 @@ if (ENVIRONMENT == 'development') {
     $config['dbname'] = 'mtech';
     $config['host'] = 'localhost';
     $config['dbuser'] = 'root';
-    $config['password'] = '';
+    $config['dbpass'] = '';
 } else {
     define("BASE_URL", "http://localhost/mtech");
     $config['dbname'] = 'mtech';
     $config['host'] = 'localhost';
     $config['dbuser'] = 'root';
-    $config['password'] = '';
+    $config['dbpass'] = '';
 }
