@@ -1,21 +1,20 @@
 <section>
     <div class="container part2">
         <h2>Solicitações de contatos</h2><br/><br/>
+
+        <?php foreach ($contatos as $contato): ?>
+
         <div class="row">
             <div class="col">
-                <h3>(Nome da pessoa)</h3>
-                <p>Aqui entra toda a descrição que ela fez do problema.</p>
-                <p><a href="pergunta.html" class="btn btn-secondary" role="button">Visualizar</a></p>
+                <h3><?php echo $contato['nome']; ?></h3>
+                <p><?php echo $contato['pergunta']; ?></p>
+                <p><a href="<?php echo BASE_URL; ?>admin/visualizar/<?php echo $contato['id']; ?>" class="btn btn-secondary" role="button">Visualizar</a></p>
             </div>
-            <hr class="featurette-divider" />
         </div>
-        <div class="row">
-            <div class="col">
-                <h3>(Nome de outra pessoa)</h3>
-                <p>Aqui entra toda a descrição que ela fez do problema.</p>
-                <p><a href="pergunta.html" class="btn btn-secondary" role="button">Visualizar</a></p>
-            </div>
-            <hr class="featurette-divider" />
-        </div>
-    </div>
+
+        <hr class="featurette-divider" />
+
+        <?php endforeach; ?>
+
+        <?php echo $_SESSION['id']; ?> 
 </section>

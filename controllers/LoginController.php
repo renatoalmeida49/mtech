@@ -3,10 +3,6 @@ class LoginController extends Controller {
     public function index() {
         $dados = array();
 
-        unset($_SESSION['id']);
-        unset($_SESSION['login']);
-        unset($_SESSION['senha']);
-
         if (isset($_POST['login']) && !empty($_POST['login'])) {
             $dao = new UsuarioDAOMySQL(Database::getInstance());
 

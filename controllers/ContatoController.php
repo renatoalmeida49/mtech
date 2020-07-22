@@ -3,6 +3,8 @@ class ContatoController extends Controller {
     public function index() {
         $dados = array();
 
+        unset($_SESSION['id']);
+
         if (isset($_POST['nome']) && !empty($_POST['nome'])) {
             $contato = new Contato();
 
@@ -10,6 +12,7 @@ class ContatoController extends Controller {
             $contato->setSobrenome($_POST['sobrenome']);
             $contato->setEmail($_POST['email']);
             $contato->setPergunta($_POST['pergunta']);
+            $contato->setJaRespondida(0);
 
             $dao = new ContatoDAOMySQL(Database::getInstance());
 

@@ -1,7 +1,7 @@
 <section>
     <form class="form-singin" method="POST">
         <h1 class="part2">Faça login</h1>
-        <input type="text" id="login" name="login" class="form-control" placeholder="Login" required/>
+        <input type="text" id="login" name="login" class="form-control" placeholder="Login" required autofocus/>
         <input type="password" id="password" name="password" class="form-control" placeholder="Senha" required/>
         <button class="btn btn-lg btn-secondary btn-block" type="submit">Login</button>
 
