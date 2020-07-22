@@ -3,7 +3,7 @@ session_start();
 require 'config.php';
 
 
-sql_autoload(function($class){
+spl_autoload_register(function($class){
 	if (file_exists('controllers/'.$class.'.php')) {
 		require 'controllers/'.$class.'.php';
 	} else if (file_exists('models/'.$class.'.php')) {

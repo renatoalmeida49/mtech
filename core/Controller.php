@@ -4,7 +4,7 @@ class Controller {
         require 'views/template.php';
     }
 
-    public function loadViewInTemplate($viewNmae, $viewData = array()) {
+    public function loadViewInTemplate($viewName, $viewData = array()) {
         extract($viewData);
 
         require 'views/'.$viewName.'.php';

@@ -4,7 +4,7 @@
             <div class="container">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img class="" src="assets/images/montagemorigin2.jpg" alt="First slide">
+                        <img class="" src="<?php echo BASE_URL; ?>assets/images/montagemorigin2.jpg" alt="First slide">
                         <div class="container">
                             <div class="carousel-caption text-center">
                                 <h1>Manutenção de computadores</h1>
@@ -14,7 +14,7 @@
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img class="" src="assets/images/newRede2.jpg" alt="Second slide">
+                        <img class="" src="<?php echo BASE_URL; ?>assets/images/newRede2.jpg" alt="Second slide">
                         <div class="container">
                             <div class="carousel-caption text-center">
                                 <h1>Serviços de rede</h1>
@@ -23,7 +23,7 @@
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img class="" src="assets/images/development2.jpg" alt="Third slide">
+                        <img class="" src="<?php echo BASE_URL; ?>assets/images/development2.jpg" alt="Third slide">
                         <div class="container">
                             <div class="carousel-caption text-right">
                                 <h1 style="font-size: 1.9rem; text-align: center;">Desenvolvimento Web</h1>
@@ -53,19 +53,19 @@
         <div class="container part2">
             <div class="row justify-content-center">
                 <div class="col-lg-4">
-                <img class="rounded-circle" src="assets/images/montagemorigin.jpg" width="140" height="140"/>
+                <img class="rounded-circle" src="<?php echo BASE_URL; ?>assets/images/montagemorigin.jpg" width="140" height="140"/>
                     <h2>Manutenção</h2>
                     <p>Avaliação de seu equipamento. Troca de peças, consultoria, 
                         atendimento em domicílio.
                     </p>
                 </div>
                 <div class="col-lg-4">
-                    <img class="rounded-circle" src="assets/images/newRede.jpg" width="140" height="140"/>
+                    <img class="rounded-circle" src="<?php echo BASE_URL; ?>assets/images/newRede.jpg" width="140" height="140"/>
                     <h2>Redes</h2>
                     <p>Passagem de cabo de rede, crimpagem, configuração de roteadores, repetidores.</p>
                 </div>
                 <div class="col-lg-4">
-                    <img class="rounded-circle" src="assets/images/development.jpg" width="140" height="140"/>
+                    <img class="rounded-circle" src="<?php echo BASE_URL; ?>assets/images/development.jpg" width="140" height="140"/>
                     <h2>Programação WEB</h2>
                     <p>Desenvolva um página para seu negócio. Tudo está online hoje em dia. Você também deve estar.</p>
                 </div>
@@ -83,7 +83,7 @@
             <div class="row justify-content-center">
                 
                 <div class="col-md-auto">
-                    <a href="contato.html" class="btn btn-secondary">
+                    <a href="<?php echo BASE_URL; ?>contato" class="btn btn-secondary">
                         Faça um orçamento
                     </a>
                 </div>

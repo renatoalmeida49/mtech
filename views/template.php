@@ -4,26 +4,26 @@
 		<meta charset="utf-8" />
 		<title>MTech</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-		<link rel="stylesheet" href="bootstrap.min.css" />
-		<link rel="stylesheet" href="style.css" />
+		<link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/css/style.css" />
 	</head>
 	<body class="bg-dark">
         <header>
 			<nav class="navbar navbar-expand-md bg-dark fixed-top navbar-dark">
-				<a class="navbar-brand" href="index.html">MTech</a>
+				<a class="navbar-brand" href="<?php echo BASE_URL; ?>">MTech</a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
 		          <span class="navbar-toggler-icon"></span>
 		        </button>
 				<div class="collapse navbar-collapse" id="navbarCollapse">
 					<ul class="navbar-nav mr-auto">
 						<li class="nav-item">
-							<a href="index.html" class="nav-link">Home</a>
+							<a href="<?php echo BASE_URL; ?>" class="nav-link">Home</a>
 						</li>
 						<li class="nav-item">
-							<a href="contato.html" class="nav-link">Contato</a>
+							<a href="<?php echo BASE_URL; ?>contato" class="nav-link">Contato</a>
 						</li>
 						<li class="nav-item">
-							<a href="sobre.html" class="nav-link">Sobre</a>
+							<a href="<?php echo BASE_URL; ?>sobre" class="nav-link">Sobre</a>
 						</li>
 					</ul>
 				</div>
@@ -40,7 +40,7 @@
 
 		<hr class="featurette-divider">
 
-		<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
-		<script type="text/javascript" src="bootstrap.min.js"></script>
+		<script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/jquery-3.3.1.min.js"></script>
+		<script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/bootstrap.min.js"></script>
 	</body>
 </html>
