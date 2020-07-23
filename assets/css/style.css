@@ -1,9 +1,6 @@
 header {
 	margin-bottom: 50px;
 }
-.color {
-	background-color: #264c73;
-}
 
 p, h2 {
 	text-align: center;
@@ -30,4 +27,8 @@ p, h2 {
 	width: 100%;
 	margin:auto;
 	max-width: 500px;
+}
+
+.colorgray {
+	background-color: #777;
 }

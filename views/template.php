@@ -21,15 +21,56 @@
 							<a href="<?php echo BASE_URL; ?>" class="nav-link">Home</a>
 						</li>
 						<li class="nav-item">
-							<a href="<?php echo BASE_URL; ?>contato" class="nav-link">Contato</a>
+							<a href="#modalContato" class="nav-link" data-toggle="modal" data-target="#modalContato">Contato</a>
 						</li>
 						<li class="nav-item">
-							<a href="<?php echo BASE_URL; ?>sobre" class="nav-link">Sobre</a>
+							<a href="#modalSobre" class="nav-link" data-toggle="modal" data-target="#modalSobre">Sobre</a>
 						</li>
 					</ul>
 				</div>
 			</nav>
 		</header>
+
+		<div id="modalContato" class="modal fade">
+			<div class="modal-dialog modal-dialog-centered ">
+				<div class="modal-content">
+					<form method="POST">
+						<div class="modal-header colorgray">
+							<h5>Formulário de contato</h5>
+							<button class="close" data-dismiss="modal"><span>&times;</span></button>
+						</div>
+						<div class="modal-body colorgray">
+							<label for="nome">Nome</label>
+							<input type="text" class="form-control" id="nome" name="nome" required />
+							<label for="sobrenome">Sobrenome</label>
+							<input type="text" class="form-control" id="sobrenome" name="sobrenome" required />
+							<label for="email">E-mail</label>
+							<input type="email" id="email" name="email"class="form-control" />
+							<label for="pergunta">Descreva o assunto:</label>
+							<textarea id="pergunta" name="pergunta" class="form-control" rows="10" cols="80"></textarea>
+						</div>
+						<div class="modal-footer colorgray">
+							<button class="btn-secondary btn">Enviar</button>
+							<button class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<div id="modalSobre" class="modal fade">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header colorgray">
+					</div>
+					<div class="modal-body colorgray">
+					</div>
+					<div class="modal-footer colorgray">
+						<button class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+					</div>
+				</div>
+			</div>
+		</div>
 
         <?php $this->loadViewInTemplate($viewName, $viewData); ?>
 
