@@ -83,9 +83,9 @@
             <div class="row justify-content-center">
                 
                 <div class="col-md-auto">
-                    <a href="<?php echo BASE_URL; ?>contato" class="btn btn-secondary">
-                        Faça um orçamento
-                    </a>
+                <a href="#modalContato" class="btn btn-secondary" data-toggle="modal" data-target="#modalContato">
+                    Contato
+                </a>
                 </div>
 
             </div>

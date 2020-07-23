@@ -6,6 +6,11 @@ p, h2 {
 	text-align: center;
 }
 
+.part1 {
+	text-align: center;
+	color: white;
+}
+
 .part2 {
 	text-align: center;
 	padding-top: 15px;
