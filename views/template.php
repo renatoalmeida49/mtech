@@ -10,7 +10,7 @@
 	</head>
 	<body class="bg-dark">
         <header>
-			<nav class="navbar navbar-expand-md bg-dark fixed-top navbar-dark">
+			<nav class="navbar navbar-expand-md fixed-top navbar-dark black">
 				<a class="navbar-brand" href="<?php echo BASE_URL; ?>">MTech</a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
 		          <span class="navbar-toggler-icon"></span>

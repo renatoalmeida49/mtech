@@ -75,22 +75,3 @@
 </section>
 
 <hr class="featurette-divider">
-
-<section>
-    <div class="container-fluid bg-dark"> 
-        <div class="container">
-            
-            <div class="row justify-content-center">
-                
-                <div class="col-md-auto">
-                <a href="#modalContato" class="btn btn-secondary" data-toggle="modal" data-target="#modalContato">
-                    Contato
-                </a>
-                </div>
-
-            </div>
-        </div>
-    </div>
-</section>
-
-<hr class="featurette-divider">
