@@ -14,7 +14,7 @@ class Core {
 
             array_shift($url);
 
-            $currentController = $url[0].'Controller';
+            $currentController = ucfirst($url[0]).'Controller';
             array_shift($url);
 
             if (isset($url[0]) && !empty($url[0])) {
@@ -33,6 +33,9 @@ class Core {
         }
 
         if (!file_exists('controllers/'.$currentController.'.php') || !method_exists($currentController, $currentAction)) {
+            $_SESSION['controller'] = $currentController;
+            $_SESSION['action'] = $currentAction;
+
             $currentController = 'HomeController';
             $currentAction = 'error404';
         }

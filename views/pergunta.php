@@ -1,7 +1,7 @@
 <section>
     <div class="container part2">
-        <h2><?php echo $pergunta['nome']; ?></h2>
-        <p><?php echo $pergunta['pergunta']; ?></p>
+        <h2><?php echo $pergunta['name']; ?></h2>
+        <p><?php echo $pergunta['answer']; ?></p>
         <p><?php echo $pergunta['email']; ?></p>
         <form method="POST" class="form-resposta">
             <label for="resposta">Sua resposta:</label>

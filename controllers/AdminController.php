@@ -4,13 +4,14 @@ class AdminController extends Controller {
         if (isset($_SESSION['id']) && !empty($_SESSION['id'])) {
             $dados = array();
 
-            $dao = new ContatoDAOMySQL(Database::getInstance());
+            $dao = new ContactDAOMySQL(Database::getInstance());
 
             $dados['contatos'] = $dao->selectAll();
 
             $this->loadTemplate('admin', $dados);
         } else {
             header("Location: ".BASE_URL."login");
+            exit;
         }
     }
 
@@ -18,10 +19,10 @@ class AdminController extends Controller {
         if (isset($_SESSION['id']) && !empty($_SESSION['id'])) {
             $dados = array();
 
-            $dao = new ContatoDAOMySQL(Database::getInstance());
+            $dao = new ContactDAOMySQL(Database::getInstance());
 
             if (isset($_POST['resposta']) && !empty($_POST['resposta'])) {
-                $contato = new Contato();
+                $contato = new Contact();
 
                 $contato->setId($id);
                 $contato->setQuemRespondeu($_SESSION['id']);
@@ -30,6 +31,7 @@ class AdminController extends Controller {
 
                 if ($dao->update($contato)) {
                     header("Location: ".BASE_URL."admin");
+                    exit;
                 } else {
                     echo "Erro ao responder contato.";
                 }
@@ -40,6 +42,7 @@ class AdminController extends Controller {
             }
         } else {
             header("Location: ".BASE_URL."login");
+            exit;
         }
     }
 }

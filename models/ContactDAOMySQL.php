@@ -1,24 +1,25 @@
 <?php
-require_once 'Contato.php';
-class ContatoDAOMySQL implements ContatoDAO {
+require_once 'Contact.php';
+class ContactDAOMySQL implements ContactDAO {
     private $pdo;
 
     public function __construct(PDO $pdo) {
         $this->pdo = $pdo;
     }
 
-    public function insert(Contato $contato) {
-        $sql = "INSERT INTO contatos (nome, sobrenome, email, pergunta, jarespondida) VALUES (:nome, :sobrenome, :email, :pergunta, :jarespondida)";
-
+    public function insert(Contact $contato) {
+        $sql = "INSERT INTO contacts (name, lastname, email, description, answered) VALUES (:name, :lastname, :email, :description, :answered)";
+                
         try {
             $stmt = $this->pdo->prepare($sql);
-            $stmt->bindValue(':nome', $contato->getNome());
-            $stmt->bindValue(':sobrenome', $contato->getSobrenome());
-            $stmt->bindValue(':email', $contato->getEmail());
-            $stmt->bindValue(':pergunta', $contato->getPergunta());
-            $stmt->bindValue(':jarespondida', $contato->getJaRespondida());
-            $stmt->execute();
 
+            $stmt->bindValue(':name', $contato->getName());
+            $stmt->bindValue(':lastname', $contato->getLastname());
+            $stmt->bindValue(':email', $contato->getEmail());
+            $stmt->bindValue(':description', $contato->getDescription());
+            $stmt->bindValue(':answered', $contato->getAnswered());
+            $stmt->execute();
+            
             return true;
 
         } catch (PDOException $e) {
@@ -27,14 +28,14 @@ class ContatoDAOMySQL implements ContatoDAO {
         }
     }
 
-    public function update(Contato $contato) {
-        $sql = "UPDATE contatos SET resposta = :resposta, jarespondida = :jarespondida, quemrespondeu = :quemrespondeu WHERE id = :id";
+    public function update(Contact $contato) {
+        $sql = "UPDATE contacts SET answer = :answer, answered = :answered, answeredBy = :answeredBy WHERE id = :id";
 
         try {
             $stmt = $this->pdo->prepare($sql);
-            $stmt->bindValue(':resposta', $contato->getResposta());
-            $stmt->bindValue(':jarespondida', $contato->getJaRespondida());
-            $stmt->bindValue(':quemrespondeu', $contato->getQuemRespondeu());
+            $stmt->bindValue(':answer', $contato->getResposta());
+            $stmt->bindValue(':answered', $contato->getJaRespondida());
+            $stmt->bindValue(':answeredBy', $contato->getQuemRespondeu());
             $stmt->bindValue(':id', $contato->getId());
 
             $stmt->execute();
@@ -48,7 +49,7 @@ class ContatoDAOMySQL implements ContatoDAO {
     public function selectAll() {
         $dados = array();
 
-        $sql = "SELECT * FROM contatos";
+        $sql = "SELECT * FROM contacts";
 
         $stmt = $this->pdo->prepare($sql);
         $stmt->execute();
@@ -62,7 +63,7 @@ class ContatoDAOMySQL implements ContatoDAO {
     public function selectById($id) {
         $dados = array();
 
-        $sql = "SELECT * FROM contatos WHERE id = :id";
+        $sql = "SELECT * FROM contacts WHERE id = :id";
 
         $stmt = $this->pdo->prepare($sql);
         $stmt->bindValue(':id', $id);

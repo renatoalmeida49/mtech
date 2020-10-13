@@ -4,19 +4,20 @@ class LoginController extends Controller {
         $dados = array();
 
         if (isset($_POST['login']) && !empty($_POST['login'])) {
-            $dao = new UsuarioDAOMySQL(Database::getInstance());
+            $dao = new UserDAOMySQL(Database::getInstance());
 
-            $usuario = new Usuario();
-            $usuario->setLogin($_POST['login']);
-            $usuario->setSenha($_POST['password']);
+            $user = new User();
+            $user->setLogin($_POST['login']);
+            $user->setPassword($_POST['password']);
 
-            $usuario = $dao->selectByLogin($usuario);
+            $user = $dao->selectByLogin($user);
 
-            if ($usuario->getId() != null) {
-                $_SESSION['id'] = $usuario->getId();
-                $_SESSION['login'] = $usuario->getLogin();
+            if ($user->getId() != null) {
+                $_SESSION['id'] = $user->getId();
+                $_SESSION['login'] = $user->getLogin();
 
                 header("Location: ".BASE_URL."admin");
+                exit;
             } else {
                 $this->loadTemplate('login', $dados);
             }

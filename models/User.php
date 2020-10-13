@@ -1,8 +1,8 @@
 <?php
-class Usuario {
+class User {
     private $id;
     private $login;
-    private $senha;
+    private $password;
 
     public function getId() {
         return $this->id;
@@ -12,8 +12,8 @@ class Usuario {
         return $this->login;
     }
 
-    public function getSenha() {
-        return $this->senha;
+    public function getPassword() {
+        return $this->password;
     }
 
     public function setId($id) {
@@ -24,12 +24,12 @@ class Usuario {
         $this->login = $login;
     }
 
-    public function setSenha($senha) {
-        $this->senha = $senha;
+    public function setPassword($password) {
+        $this->password = $password;
     }
 
 }
 
-interface UsuarioDAO {
-    public function selectByLogin(Usuario $usuario);
+interface UserDAO {
+    public function selectByLogin(User $user);
 }
