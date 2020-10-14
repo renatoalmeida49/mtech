@@ -7,7 +7,7 @@
         <div class="row">
             <div class="col">
                 <h3><?php echo $contato['name']; ?></h3>
-                <p><?php echo $contato['answer']; ?></p>
+                <p><?php echo $contato['description']; ?></p>
                 <p><a href="<?php echo BASE_URL; ?>admin/visualizar/<?php echo $contato['id']; ?>" class="btn btn-secondary" role="button">Visualizar</a></p>
             </div>
         </div>

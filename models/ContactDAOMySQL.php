@@ -33,9 +33,9 @@ class ContactDAOMySQL implements ContactDAO {
 
         try {
             $stmt = $this->pdo->prepare($sql);
-            $stmt->bindValue(':answer', $contato->getResposta());
-            $stmt->bindValue(':answered', $contato->getJaRespondida());
-            $stmt->bindValue(':answeredBy', $contato->getQuemRespondeu());
+            $stmt->bindValue(':answer', $contato->getAnswer());
+            $stmt->bindValue(':answered', $contato->getAnswered());
+            $stmt->bindValue(':answeredBy', $contato->getAnsweredBy());
             $stmt->bindValue(':id', $contato->getId());
 
             $stmt->execute();
@@ -49,7 +49,7 @@ class ContactDAOMySQL implements ContactDAO {
     public function selectAll() {
         $dados = array();
 
-        $sql = "SELECT * FROM contacts";
+        $sql = "SELECT * FROM contacts WHERE answered = 0";
 
         $stmt = $this->pdo->prepare($sql);
         $stmt->execute();

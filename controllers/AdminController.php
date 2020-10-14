@@ -25,9 +25,9 @@ class AdminController extends Controller {
                 $contato = new Contact();
 
                 $contato->setId($id);
-                $contato->setQuemRespondeu($_SESSION['id']);
-                $contato->setJaRespondida(1);
-                $contato->setResposta($_POST['resposta']);
+                $contato->setAnsweredBy($_SESSION['id']);
+                $contato->setAnswered(1);
+                $contato->setAnswer($_POST['resposta']);
 
                 if ($dao->update($contato)) {
                     header("Location: ".BASE_URL."admin");
