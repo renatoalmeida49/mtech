@@ -41,3 +41,33 @@ p, h2 {
 .black {
 	background-color: black;
 }
+
+
+.feed-item {
+	display: flex;
+	flex-direction: column;
+	background-color: #777;
+	padding: 10px;
+	border: 7px solid rgb(78, 78, 78);
+	border-radius: 7px;
+}
+
+.row .name-contact {
+	font-size: 28px;
+	display: flex;
+	justify-content: left;
+	color: black;
+}
+
+.row .description-contact {
+	font-size: 20px;
+	display: flex;
+	justify-content: left;
+	/*background-color: blue;*/
+}
+
+.row .button-contact {
+	display: flex;
+	justify-content: center;
+	/*background-color: green;*/
+}

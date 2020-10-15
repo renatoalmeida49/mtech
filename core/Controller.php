@@ -9,4 +9,10 @@ class Controller {
 
         require 'views/'.$viewName.'.php';
     }
+
+    public function render($viewName, $viewData = array()) {
+        extract($viewData);
+
+        require 'views/'.$viewName.'.php';
+    }
 }

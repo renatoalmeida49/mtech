@@ -7,17 +7,17 @@ class ContactDAOMySQL implements ContactDAO {
         $this->pdo = $pdo;
     }
 
-    public function insert(Contact $contato) {
+    public function insert(Contact $contact) {
         $sql = "INSERT INTO contacts (name, lastname, email, description, answered) VALUES (:name, :lastname, :email, :description, :answered)";
                 
         try {
             $stmt = $this->pdo->prepare($sql);
 
-            $stmt->bindValue(':name', $contato->getName());
-            $stmt->bindValue(':lastname', $contato->getLastname());
-            $stmt->bindValue(':email', $contato->getEmail());
-            $stmt->bindValue(':description', $contato->getDescription());
-            $stmt->bindValue(':answered', $contato->getAnswered());
+            $stmt->bindValue(':name', $contact->getName());
+            $stmt->bindValue(':lastname', $contact->getLastname());
+            $stmt->bindValue(':email', $contact->getEmail());
+            $stmt->bindValue(':description', $contact->getDescription());
+            $stmt->bindValue(':answered', $contact->getAnswered());
             $stmt->execute();
             
             return true;
@@ -28,15 +28,15 @@ class ContactDAOMySQL implements ContactDAO {
         }
     }
 
-    public function update(Contact $contato) {
+    public function update(Contact $contact) {
         $sql = "UPDATE contacts SET answer = :answer, answered = :answered, answeredBy = :answeredBy WHERE id = :id";
 
         try {
             $stmt = $this->pdo->prepare($sql);
-            $stmt->bindValue(':answer', $contato->getAnswer());
-            $stmt->bindValue(':answered', $contato->getAnswered());
-            $stmt->bindValue(':answeredBy', $contato->getAnsweredBy());
-            $stmt->bindValue(':id', $contato->getId());
+            $stmt->bindValue(':answer', $contact->getAnswer());
+            $stmt->bindValue(':answered', $contact->getAnswered());
+            $stmt->bindValue(':answeredBy', $contact->getAnsweredBy());
+            $stmt->bindValue(':id', $contact->getId());
 
             $stmt->execute();
 
@@ -60,6 +60,7 @@ class ContactDAOMySQL implements ContactDAO {
 
         return $dados;
     }
+
     public function selectById($id) {
         $dados = array();
 

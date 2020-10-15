@@ -6,7 +6,7 @@ class AdminController extends Controller {
 
             $dao = new ContactDAOMySQL(Database::getInstance());
 
-            $dados['contatos'] = $dao->selectAll();
+            $dados['contacts'] = $dao->selectAll();
 
             $this->loadTemplate('admin', $dados);
         } else {
