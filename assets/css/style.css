@@ -28,12 +28,6 @@ p, h2 {
 	padding: 15px;
 }
 
-.form-resposta {
-	width: 100%;
-	margin:auto;
-	max-width: 500px;
-}
-
 .colorgray {
 	background-color: #777;
 }
@@ -70,4 +64,39 @@ p, h2 {
 	display: flex;
 	justify-content: center;
 	/*background-color: green;*/
+}
+
+.contact-name {
+	color: black;
+	display: flex;
+	justify-content: left;
+	font-size: 32px;
+	margin: 10px;
+}
+
+.contact-description {
+	color: white;
+	display: flex;
+	justify-content: left;
+	font-size: 20px;
+	margin: 10px;
+}
+
+.contact-email {
+	color: black;
+	display: flex;
+	justify-content: left;
+	margin: 10px;
+}
+
+.contact-answer-area {
+	color: black;
+	display: flex;
+	justify-content: left;
+	margin: 10px;
+}
+
+.button-contact {
+	display: flex;
+	justify-content: center;
 }
