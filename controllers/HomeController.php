@@ -4,8 +4,6 @@ class HomeController extends Controller {
     public function index() {
         $dados = array();
 
-        unset($_SESSION['id']);
-
         if (isset($_POST['nome']) && !empty($_POST['nome'])) {
             $contact = new Contact();
 
@@ -26,6 +24,13 @@ class HomeController extends Controller {
         }
 
         $this->loadTemplate('home', $dados);
+    }
+
+    public function logout() {
+        unset($_SESSION['id']);
+
+        header("Location: ".BASE_URL);
+        exit;
     }
 
     public function error404() {

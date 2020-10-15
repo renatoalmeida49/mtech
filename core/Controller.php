@@ -1,18 +1,18 @@
 <?php
 class Controller {
     public function loadTemplate($viewName, $viewData = array()) {
-        require 'views/template.php';
+        require 'views/partials/template.php';
     }
 
     public function loadViewInTemplate($viewName, $viewData = array()) {
         extract($viewData);
 
-        require 'views/'.$viewName.'.php';
+        require 'views/pages/'.$viewName.'.php';
     }
 
-    public function render($viewName, $viewData = array()) {
+    public function loadPartial($viewName, $viewData = array()) {
         extract($viewData);
 
-        require 'views/'.$viewName.'.php';
+        require 'views/partials/'.$viewName.'.php';
     }
 }

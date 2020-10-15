@@ -100,3 +100,8 @@ p, h2 {
 	display: flex;
 	justify-content: center;
 }
+
+.button-login {
+	background-color: rgb(47, 63, 47);
+	border-radius: 10px;
+}
