@@ -21,4 +21,3 @@ Personal website for disclosure of IT services.
 
 * More options to the admin manage better the list of contacts.
 * The answers of the admin be sent to the e-mail of who ask a question
-* Transparency for the png files
