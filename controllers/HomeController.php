@@ -1,23 +1,30 @@
 <?php
+require 'core/Settings.php';
+
 class HomeController extends Controller {
+
+    private function getHeaders($email) {
+        $headers = 'From: '.Settings::FROM."\r\n";
+        $headers .= 'Content-type: text/html; charset=iso-8859-1'."\r\n";
+        $headers .= 'Reply-To: '.$email;
+
+        return $headers;
+    }
 
     public function index() {
         $dados = array();
 
+        echo Settings::TO;
+        echo Settings::FROM;
+
         if (isset($_POST['nome']) && !empty($_POST['nome'])) {
-            $from = "contato@sistemas.life";
-            $to = "renatoalmeida49@gmail.com";
 
             $name = filter_input(INPUT_POST, 'nome');
             $lastname = filter_input(INPUT_POST, 'sobrenome');
             $email = filter_input(INPUT_POST, 'email');
             $pergunta = filter_input(INPUT_POST, 'pergunta');
 
-            $headers = 'From: '.$from."\r\n";
-            $headers .= 'Content-type: text/html; charset=iso-8859-1'."\r\n";
-            $headers .= 'Reply-To: '.$email;
-
-            $subject = "Contato MTech";
+            $headers = $this->getHeaders($email);
 
             $message = "
                 <html>
@@ -32,17 +39,10 @@ class HomeController extends Controller {
             ";
 
             
-            mail($to, $subject, $message, $headers); 
+            mail(Settings::TO, Settings::SUBJECT, $message, $headers); 
         }
 
         $this->loadTemplate('home', $dados);
-    }
-
-    public function logout() {
-        unset($_SESSION['id']);
-
-        header("Location: ".BASE_URL);
-        exit;
     }
 
     public function error404() {
