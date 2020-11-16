@@ -5,22 +5,34 @@ class HomeController extends Controller {
         $dados = array();
 
         if (isset($_POST['nome']) && !empty($_POST['nome'])) {
-            $contact = new Contact();
+            $from = "contato@sistemas.life";
+            $to = "renatoalmeida49@gmail.com";
 
-            $contact->setName($_POST['nome']);
-            $contact->setLastname($_POST['sobrenome']);
-            $contact->setEmail($_POST['email']);
-            $contact->setDescription($_POST['pergunta']);
-            $contact->setAnswered(0);
+            $name = filter_input(INPUT_POST, 'nome');
+            $lastname = filter_input(INPUT_POST, 'sobrenome');
+            $email = filter_input(INPUT_POST, 'email');
+            $pergunta = filter_input(INPUT_POST, 'pergunta');
 
-            $dao = new ContactDAOMySQL(Database::getInstance());
+            $headers = 'From: '.$from."\r\n";
+            $headers .= 'Content-type: text/html; charset=iso-8859-1'."\r\n";
+            $headers .= 'Reply-To: '.$email;
 
-            if ($dao->insert($contact)) {
-                header("Location: ".BASE_URL);
-                exit;
-            } else {
-                echo "Erro ao enviar solicitação de contato";
-            }                
+            $subject = "Contato MTech";
+
+            $message = "
+                <html>
+                    
+                    <p><strong>Nome:</strong> $name</p>
+                    
+                    <p><strong>E-mail:</strong> $email</p>
+                    
+                    <p><strong>Mensagem:</strong> $pergunta</p>
+                    
+                </html>
+            ";
+
+            
+            mail($to, $subject, $message, $headers); 
         }
 
         $this->loadTemplate('home', $dados);
