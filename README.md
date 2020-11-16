@@ -7,18 +7,14 @@ Personal website for disclosure of IT services.
 * HTML5
 * CSS3 (Bootstrap v4.5.0)
 * JS (jQuery v3.3.1) 
-* MySQL 
 * PHP (v7.4)  
 
 ## How to run the project
-  
-1. Run the SQL file at `assets/sql`
+
+1. Go to `core/Settings.php` and change the fields to put the data from your website and e-mail
 2. In your brownser search for `localhost/mtech`
-3. Every contact request you made it will be available to the admin user.
-4. To access as an admin open `localhost/mtech/admin` in your browser. Log with user and password "admin".
 
 ## TODO
 
-* More options to the admin manage better the list of contacts.
-* The answers of the admin be sent to the e-mail of who ask a question
-* Better interface in the home page
+1. Add another languages to the website
+2. The site is by default (and I mean designed) in Dark Mode. Maybe add a Light Mode, just for pratice
