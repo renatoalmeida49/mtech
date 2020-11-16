@@ -7,7 +7,7 @@
             </div>
             <div class="modal-body colorgray">
                 <div class="row featurette">
-                    <div class="col-md-7">
+                    <div class="col-md-7 order-md-2">
                         <h5 class="featurette-heading marketing">
                             Anderson Azevedo
                         </h5>

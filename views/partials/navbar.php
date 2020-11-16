@@ -12,16 +12,6 @@
                 <a href="#modalSobre" class="nav-link" data-toggle="modal" data-target="#modalSobre">Sobre</a>
             </li>
 
-            <?php if (isset($_SESSION['id']) && !empty($_SESSION['id'])): ?>
-            <li class="nav-item">
-                <a href="<?= BASE_URL; ?>home/logout" class="nav-link button-login">Sair</a>
-            </li>
-            <?php else: ?>
-            <li class="nav-item">
-                <a href="<?= BASE_URL; ?>login" class="nav-link button-login">Login</a>
-            </li>
-            <?php endif; ?>
-
         </ul>
     </div>
 </nav>
