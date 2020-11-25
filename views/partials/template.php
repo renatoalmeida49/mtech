@@ -10,20 +10,16 @@
 	</head>
 	<body class="bg-dark">
         <header>
-			<?= $this->loadPartial('navbar'); ?>
+			<?= $this->loadPartial('navbar', $viewData); ?>
 		</header>
 
-		<?= $this->loadPartial('modalContact'); ?>
+		<?= $this->loadPartial('modalContact', $viewData); ?>
 
-		<?= $this->loadPartial('modalAbout'); ?>
+		<?= $this->loadPartial('modalAbout', $viewData); ?>
 
         <?= $this->loadViewInTemplate($viewName, $viewData); ?>
 
-        <footer>
-			<div class="container part2">
-				Todos os direitos reservados. 2020.
-			</div>
-		</footer>
+        <?= $this->loadPartial('footer', $viewData); ?>
 
 		<hr class="featurette-divider">
 

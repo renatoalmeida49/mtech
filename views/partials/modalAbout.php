@@ -2,7 +2,7 @@
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content part1">
             <div class="modal-header colorgray">
-                <h2>Sobre nós</h2>
+                <h2><?= $lang->get("TITLE"); ?></h2>
                 <button class="close" data-dismiss="modal"><span>&times;</span></button>
             </div>
             <div class="modal-body colorgray">
@@ -12,7 +12,7 @@
                             Anderson Azevedo
                         </h5>
                         <p class="lead">
-                            Mestre do hardware, domina tudo referente a manutenção de desktops. Perito em redes, não há serviço que não possa ser feito.
+                        <?= $lang->get("ANDERSON_AZEVEDO"); ?>
                         </p>
                     </div>
                     <div class="col-md-5">
@@ -27,7 +27,7 @@
                             Kátia Lins
                         </h5>
                         <p class="lead">
-                            Mestre do hardware, software, redes, banco de dados, e tudo de TI.
+                        <?= $lang->get("KATIA_LINS"); ?>
                         </p>
                     </div>
                     <div class="col-md-5">
@@ -42,7 +42,7 @@
                             Renato Novaes
                         </h5>
                         <p class="lead">
-                            Secretário do time.
+                        <?= $lang->get("RENATO_NOVAES"); ?>
                         </p>
                     </div>
                     <div class="col-md-5">
@@ -51,7 +51,7 @@
                 </div>
             </div>
             <div class="modal-footer colorgray">
-                <button class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                <button class="btn btn-secondary" data-dismiss="modal"><?= $lang->get("CLOSE"); ?></button>
             </div>
         </div>
     </div>

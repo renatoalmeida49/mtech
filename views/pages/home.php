@@ -7,8 +7,8 @@
                         <img class="" src="<?= BASE_URL; ?>assets/images/montagemorigin2.jpg" alt="First slide">
                         <div class="container">
                             <div class="carousel-caption text-center">
-                                <h1>Manutenção de computadores</h1>
-                                <p>Serviços de manutenção em desktops e notebooks</p>
+                                <h1><?= $lang->get('MAINTANCE_OF_COMPUTERS'); ?></h1>
+                                <p><?= $lang->get('MAINTANCE_DESCRIPTION'); ?></p>
                                 
                             </div>
                         </div>
@@ -17,8 +17,8 @@
                         <img class="" src="<?= BASE_URL; ?>assets/images/newRede2.jpg" alt="Second slide">
                         <div class="container">
                             <div class="carousel-caption text-center">
-                                <h1>Serviços de rede</h1>
-                                <p>Serviços de configuração de roteadores, repetidores, passagem e crimpagem de cabos</p>
+                                <h1><?= $lang->get('NETWORK_SERVICES'); ?></h1>
+                                <p><?= $lang->get('NETWORK_DESCRIPTION'); ?></p>
                             </div>
                         </div>
                     </div>
@@ -26,8 +26,8 @@
                         <img class="" src="<?= BASE_URL; ?>assets/images/development2.jpg" alt="Third slide">
                         <div class="container">
                             <div class="carousel-caption text-right">
-                                <h1 style="font-size: 1.9rem; text-align: center;">Desenvolvimento Web</h1>
-                                <p>Criação de sites e vitrines virtuais</p>
+                                <h1 style="font-size: 1.9rem; text-align: center;"><?= $lang->get('WEB_DEVELOPMENT'); ?></h1>
+                                <p><?= $lang->get('WEB_DESCRIPTION'); ?></p>
                             </div>
                         </div>
                     </div>
@@ -54,20 +54,19 @@
             <div class="row justify-content-center">
                 <div class="col-lg-4">
                 <img class="rounded-circle" src="<?= BASE_URL; ?>assets/images/montagemorigin.jpg" width="140" height="140"/>
-                    <h2>Manutenção</h2>
-                    <p>Avaliação de seu equipamento. Troca de peças, consultoria, 
-                        atendimento em domicílio.
+                    <h2><?= $lang->get('MAINTANCE'); ?></h2>
+                    <p><?= $lang->get('MAINTANCE_RESUMED'); ?>
                     </p>
                 </div>
                 <div class="col-lg-4">
                     <img class="rounded-circle" src="<?= BASE_URL; ?>assets/images/newRede.jpg" width="140" height="140"/>
-                    <h2>Redes</h2>
-                    <p>Passagem de cabo de rede, crimpagem, configuração de roteadores, repetidores.</p>
+                    <h2><?= $lang->get('NETWORK'); ?></h2>
+                    <p><?= $lang->get('NETWORK_RESUMED'); ?></p>
                 </div>
                 <div class="col-lg-4">
                     <img class="rounded-circle" src="<?= BASE_URL; ?>assets/images/development.jpg" width="140" height="140"/>
-                    <h2>Programação WEB</h2>
-                    <p>Desenvolva um página para seu negócio. Tudo está online hoje em dia. Você também deve estar.</p>
+                    <h2><?= $lang->get('WEB'); ?> WEB</h2>
+                    <p><?= $lang->get('WEB_RESUMED'); ?></p>
                 </div>
             </div>
         </div>

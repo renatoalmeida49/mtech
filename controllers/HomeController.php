@@ -14,8 +14,11 @@ class HomeController extends Controller {
     public function index() {
         $dados = array();
 
-        echo Settings::TO;
-        echo Settings::FROM;
+        if(!empty($_GET['lang'])) {
+            $_SESSION['lang'] = filter_input(INPUT_GET, 'lang');
+        }
+
+        $dados['lang'] = new Language();
 
         if (isset($_POST['nome']) && !empty($_POST['nome'])) {
 
