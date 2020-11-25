@@ -16,13 +16,13 @@
 
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a href="<?= BASE_URL; ?>/?lang=pt-br" class="nav-link">
-                    <img src="<?= BASE_URL; ?>/assets/images/br-flag.png" width="50"/>
+                <a href="<?= BASE_URL; ?>?lang=pt-br" class="nav-link">
+                    <img src="<?= BASE_URL; ?>assets/images/br-flag.png" width="50"/>
                 </a>
             </li>
             <li class="nav-item">
-                <a href="<?= BASE_URL; ?>/?lang=en-us" class="nav-link">
-                    <img src="<?= BASE_URL; ?>/assets/images/us-flag.png" width="50"/>
+                <a href="<?= BASE_URL; ?>?lang=en-us" class="nav-link">
+                    <img src="<?= BASE_URL; ?>assets/images/us-flag.png" width="50"/>
                 </a>
             </li>
         </ul>

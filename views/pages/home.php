@@ -65,7 +65,7 @@
                 </div>
                 <div class="col-lg-4">
                     <img class="rounded-circle" src="<?= BASE_URL; ?>assets/images/development.jpg" width="140" height="140"/>
-                    <h2><?= $lang->get('WEB'); ?> WEB</h2>
+                    <h2><?= $lang->get('WEB'); ?></h2>
                     <p><?= $lang->get('WEB_RESUMED'); ?></p>
                 </div>
             </div>
