@@ -16,5 +16,5 @@ Personal website for disclosure of IT services.
 
 ## TODO
 
-1. Add another languages to the website
+1. (DONE) Add another languages to the website
 2. The site is by default (and I mean designed) in Dark Mode. Maybe add a Light Mode, just for pratice
